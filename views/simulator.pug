@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Simulasi Perhitungan
+  body
+    .container.mt-5
+      .row.justify-content-center
+        .col-md-8
+          h2.text-center Simulasi Perhitungan
+
+          table.table.table-bordered
+            tbody
+              each row in cellData
+                tr
+                td= row[0]
+                td= row[2]
+                td
+                    button.btn.btn-primary.rounded-circle(type='button') -
+                    span.mx-2.quantity 0
+                    button.btn.btn-outline-secondary +
+
+          .row.justify-content-between.mt-4.px-3
+            div Total: Rp
+              span.total-price *total price*
+            div Total Gram:
+              span.total-weight *total weight* gram
+
+          button.btn.btn-primary.w-100 Reset

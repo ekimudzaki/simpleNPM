@@ -1,0 +1,15 @@
+.container
+      h1.text-center Gold Prices
+      p Today's Price, #{day} #{date}
+      table.table.table-bordered
+        thead
+          tr
+            th Weight
+            th Price (Sell)
+            th Price (Buy)
+        tbody
+          each row in cellData
+            tr
+              td= row[0]
+              td= row[2]
+              td= row[3]
