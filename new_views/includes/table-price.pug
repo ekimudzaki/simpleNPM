@@ -1,0 +1,35 @@
+section#gold-price.page-section
+    .container.my-5
+        .row
+            // Left Column: Gold Bar Image with border, shadow, and hover effect
+            .col-md-6.d-flex.justify-content-center.align-items-center.mb-sm-4
+                img(src="assets/img/header-bg-antam-black.jpg" alt="Gold Bar" class="img-fluid gold-image" style="max-width: 80%")
+
+            // Right Column: Pricing Table
+            .col-md-6
+                h2.text-center.mb-4 Harga Jual Beli Emas Antam Certicard Redmark
+                p.text-center Hari ini #{day}, #{date}
+                table.table.table-bordered
+                    thead.table-light
+                        tr
+                            th Berat
+                            th Kami Beli / Buyback
+                            th Kami Jual
+                    tbody
+                        each row in cellData
+                            tr
+                                td= row[0]
+                                td= row[3]
+                                td= row[2]
+
+style.
+    /* Custom CSS for image styling */
+    .gold-image {
+        border: 10px solid #ccc;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gold-image:hover {
+        transform: scale(1.05); /* Zoom effect */
+    }

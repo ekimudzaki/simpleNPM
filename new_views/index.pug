@@ -36,55 +36,26 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.text-uppercase.ms-auto.py-4.py-lg-0
                         li.nav-item
-                            a.nav-link(href='#services') Services
+                            a.nav-link(href='#gold-price') Harga Emas
                         li.nav-item
-                            a.nav-link(href='#portfolio') Portfolio
+                            a.nav-link(href='#services') Layanan Kami
                         li.nav-item
-                            a.nav-link(href='#about') About
+                            a.nav-link(href='#about') Tentang Kami
                         li.nav-item
-                            a.nav-link(href='#team') Team
-                        li.nav-item
-                            a.nav-link(href='#contact') Contact
+                            a.nav-link(href='#contact') Hubungi Kami
         // Masthead
         header.masthead
             .container
                 .masthead-heading.text-uppercase Jual Beli Emas Antam & Perhiasan Sesuai Syariah, Langsung Cair Yadan Biyadin.
                 .masthead-subheading.text-uppercase Melayani Jual Beli Logam Mulia & Perhiasan
                 .masthead-subheading.text-uppercase COD Antar Jemput Jabodetabek. Harga Antam Terbaik.
-                a.btn.btn-primary.btn-xl.text-uppercase(href='#services') Tell Me More
+                a.btn.btn-primary.btn-xl.text-uppercase(href='#gold-price') Hubungi Kami
 
         //gold price
-        include includes/gold-price.pug
+        include includes/table-price.pug
 
         // Services
-        section#services.page-section
-            .container
-                .text-center
-                    h2.section-heading.text-uppercase Services
-                    h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-                .row.text-center
-                    .col-md-4
-                        span.fa-stack.fa-4x
-                            i.fas.fa-circle.fa-stack-2x.text-primary
-                            i.fas.fa-shopping-cart.fa-stack-1x.fa-inverse
-                        h4.my-3 E-Commerce
-                        p.text-muted
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-                    .col-md-4
-                        span.fa-stack.fa-4x
-                            i.fas.fa-circle.fa-stack-2x.text-primary
-                            i.fas.fa-laptop.fa-stack-1x.fa-inverse
-                        h4.my-3 Responsive Design
-                        p.text-muted
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-                    .col-md-4
-                        span.fa-stack.fa-4x
-                            i.fas.fa-circle.fa-stack-2x.text-primary
-                            i.fas.fa-lock.fa-stack-1x.fa-inverse
-                        h4.my-3 Web Security
-                        p.text-muted
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-
+        include includes/services.pug
         // Portfolio Grid
         //- section#portfolio.page-section.bg-light
             .container
@@ -266,16 +237,16 @@ html(lang='en')
                 .row.align-items-center
                     .col-md-3.col-sm-6.my-3
                         a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/microsoft.svg' alt='...' aria-label='Microsoft Logo')
+                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/antam-1.png' alt='...' aria-label='Antam Logo')
                     .col-md-3.col-sm-6.my-3
                         a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/google.svg' alt='...' aria-label='Google Logo')
+                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/king-halim.png' alt='...' aria-label='King Halim Logo')
                     .col-md-3.col-sm-6.my-3
                         a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/facebook.svg' alt='...' aria-label='Facebook Logo')
+                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/ubs.png' alt='...' aria-label='UBS Logo')
                     .col-md-3.col-sm-6.my-3
                         a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/ibm.svg' alt='...' aria-label='IBM Logo')
+                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/lotus.webp' alt='...' aria-label='Lotus Archi Logo')
 
         // Contact
         //- section#contact.page-section
@@ -371,13 +342,13 @@ html(lang='en')
             .container
                 .row.align-items-center
                     .col-lg-4.text-lg-start
-                        | Copyright &copy; Your Website 2023
+                        | Copyright &copy; Logam Berkah 2024
                     .col-lg-4.my-3.my-lg-0
-                        a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Twitter')
-                            i.fab.fa-twitter
+                        a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Instagram')
+                            i.fab.fa-instagram
                         a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Facebook')
                             i.fab.fa-facebook-f
-                        a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='LinkedIn')
+                        a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='TikTok')
                             i.fab.fa-linkedin-in
                     .col-lg-4.text-lg-end
                         a.link-dark.text-decoration-none.me-3(href='#!') Privacy Policy
