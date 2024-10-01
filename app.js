@@ -78,7 +78,7 @@ app.get('/simulator', async (req, res) => {
   res.render('simulator')
 });
 
-app.get('/api/cellData', async (req, res) => {
+app.get('/cellData', async (req, res) => {
   const jsonData = await getCellData('C2:F13');
   res.json(jsonData);  // Send cellData as JSON
 });

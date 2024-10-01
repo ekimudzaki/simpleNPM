@@ -15,8 +15,7 @@
     "express": "^4.19.2",
     "google-spreadsheet": "^4.1.1",
     "googleapis": "^134.0.0",
-    "pug": "^3.0.3",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug": "^3.0.3"
   },
   "devDependencies": {
     "pm2": "^5.4.2"

@@ -1,4 +1,4 @@
-fetch('/api/cellData')
+fetch('/cellData')
     .then(response => response.json())
     .then(data => {
         const tableBody = document.getElementById('table-body');
