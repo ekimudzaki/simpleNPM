@@ -1,4 +1,4 @@
-fetch('/cellData')
+fetch('/.netlify/functions/cellData')
     .then(response => response.json())
     .then(data => {
         const tableBody = document.getElementById('table-body');
