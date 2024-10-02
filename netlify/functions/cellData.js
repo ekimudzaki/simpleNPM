@@ -1,3 +1,6 @@
+import { GoogleSpreadsheet } from 'google-spreadsheet';
+import { JWT } from 'google-auth-library';
+
 const jsonDataBase64 = process.env.KEY;
 const decode = JSON.parse(Buffer.from(jsonDataBase64, 'base64').toString());
 const serviceAccountAuth = new JWT({
@@ -39,7 +42,7 @@ async function getCellData(range) {
 
 }
 
-exports.handler = async function (event, context) {
+exports.handler = async function () {
     const cellData = await getCellData('C2:F13');
 
     return {
