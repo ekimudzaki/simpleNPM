@@ -18,7 +18,7 @@ const doc = new GoogleSpreadsheet('1BsEIF91CGBQjni0O4XDIpMFsk1i9ldo0Rv6-meCa6Hc'
 async function getCellData(range) {
     // await doc.useServiceAccountAuth(serviceAccountAuth);
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[0];
+    const sheet = doc.sheetsByIndex[2];
     await sheet.loadCells(range);
     // Create an array to hold cell values
     const cellData = [];
