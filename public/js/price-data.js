@@ -12,7 +12,7 @@ fetch('/.netlify/functions/cellData')
         const tableBody = document.getElementById('table-body');
 
         // Logic: Check if it's before 9 AM (09:00)
-        if (currentHourGMT7 < 3) {
+        if (currentHourGMT7 < 9) {
             // Create a new <tr> element
             const newRow = document.createElement("tr");
 
