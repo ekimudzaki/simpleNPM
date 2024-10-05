@@ -9,3 +9,4 @@ const formattedDate = today.toLocaleDateString('id-ID', {
 
 // Example Output: "Monday, September 30, 2024"
 document.getElementById('date-container').textContent = formattedDate;
+document.getElementById('date-container1').textContent = formattedDate;

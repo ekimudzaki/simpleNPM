@@ -39,7 +39,8 @@
       <div class="masthead-subheading text-uppercase">COD Antar Jemput Jabodetabek. Harga Antam Terbaik.</div><a
         class="btn btn-primary btn-xl text-uppercase" href="#gold-price">Hubungi Kami</a>
     </div>
-  </header><!--gold price-->
+  </header>
+  <!--gold price-->
   <section class="page-section" id="gold-price">
     <div class="container my-5">
       <div class="row"><!-- Left Column: Gold Bar Image with border, shadow, and hover effect-->
@@ -57,9 +58,74 @@
                 <th>Kami Jual</th>
               </tr>
             </thead>
-            <tbody id="table-body"></tbody>
+            <tbody id="table-body">
+              <tr class="loading-tr">
+                <!-- Spinner row -->
+                <td colspan="3" class="text-center">
+                  <!-- loader -->
+                  <div class="d-flex justify-content-center my-3">
+                    <div class="spinner-border text-primary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    /* Custom style to add shadow to the line */
+    hr.shadow-line {
+      border: none;
+      height: 10px;
+      background-color: #ccc;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  <hr class="shadow-line my-4">
+  <!--gold price retro-->
+  <section class="page-section" id="gold-price">
+    <div class="container my-5">
+      <div class="row">
+        <!-- loader -->
+        <div id="loading" style="display: none;">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <!-- left Column: Pricing Table-->
+        <div class="col-md-6">
+          <h2 class="text-center mb-4">Harga Jual Beli Emas Antam Retro</h2>
+          <p class="text-center" id="date-container1"></p>
+          <table class="table table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th>Berat</th>
+                <th>Kami Beli / Buyback</th>
+                <th>Kami Jual</th>
+              </tr>
+            </thead>
+            <tbody id="table-body-retro">
+              <tr class="loading-tr">
+                <!-- Spinner row -->
+                <td colspan="3" class="text-center">
+                  <!-- loader -->
+                  <div class="d-flex justify-content-center my-3">
+                    <div class="spinner-border text-primary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Right Column: Gold Bar Image with border, shadow, and hover effect-->
+        <div class="col-md-6 d-flex justify-content-center align-items-center mb-5"><img class="img-fluid gold-image"
+            src="assets/img/retro.jpeg" alt="Gold Bar" style="max-width: 80%"></div>
       </div>
     </div>
   </section>
