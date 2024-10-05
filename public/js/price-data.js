@@ -8,6 +8,10 @@ fetch('/.netlify/functions/cellData')
         // Adjust the current hour to GMT+7 (UTC+7)
         const currentHourGMT7 = (currentHourUTC + 7) % 24; // Adjust for time difference and wrap around 24-hour format
 
+        // define all id
+        const loadingSpinner = document.getElementsByClassName('spinner-border');
+        const teer = document.getElementsByClassName('loading-tr');
+
         // Function to render a table based on a subset of data
         function renderTable(tableId, dataSubset) {
             const tableBody = document.getElementById(tableId);
@@ -32,8 +36,8 @@ fetch('/.netlify/functions/cellData')
 
         // Function to simulate data loading with a delay
         function loadDataWithLazyLoad() {
-            const loadingSpinner = document.getElementsByClassName('spinner-border');
-            const teer = document.getElementsByClassName('loading-tr');
+            // const loadingSpinner = document.getElementsByClassName('spinner-border');
+            // const teer = document.getElementsByClassName('loading-tr');
             if (!loadingSpinner) {
                 console.error("Loading spinner element not found!");
                 return;
@@ -51,27 +55,23 @@ fetch('/.netlify/functions/cellData')
             }, 2000); // Simulate a 2-second delay
         }
 
-        // Logic: Check if it's before 9 AM (09:00)
-        if (currentHourGMT7 < 9) {
+        function renderTableBefore9(tableId){
+            //define table
+            const tableBody = document.getElementById(tableId);
             // Create a new <tr> element
             const newRow = document.createElement("tr");
-
             // Create a new <td> element
             const newCell = document.createElement("td");
-
             // Set the id attribute for the <td> element
             newCell.id = "message-cell";
             newCell.setAttribute('colspan', '3');
             newCell.style.textAlign = 'center';
             newCell.style.verticalAlign = 'middle';
-
             // Optionally, you can add text or other content inside the cell
             newCell.textContent = "Harga Emas hari ini akan di update setiap jam 9 WIB, Klik tombol di bawah untuk penjelasan lebih lanjut";
-
             //line break
             const lineBreak = document.createElement('br');
             newCell.appendChild(lineBreak);
-
             // Create a Bootstrap-styled button
             const button = document.createElement('button');
             button.classList.add('btn', 'btn-primary'); // Bootstrap button classes
@@ -81,12 +81,23 @@ fetch('/.netlify/functions/cellData')
                 window.location.href = 'https://www.google.com';  // The target URL
             };
             newCell.appendChild(button);
-
             // Append the <td> to the <tr>
             newRow.appendChild(newCell);
-
             // Append the new <tr> to the table's <tbody>
             tableBody.appendChild(newRow);
+        }
+
+        // Logic: Check if it's before 9 AM (09:00)
+        if (currentHourGMT7 < 9) {
+            //hide all spinner
+            loadingSpinner[0].style.display = 'none';
+            loadingSpinner[1].style.display = 'none';
+            teer[0].style.display = 'none';
+            teer[1].style.display = 'none';
+
+            renderTableBefore9('table-body');
+            renderTableBefore9('table-body-retro');
+
 
         } else {
             loadDataWithLazyLoad();
