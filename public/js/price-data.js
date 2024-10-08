@@ -52,7 +52,7 @@ fetch('/.netlify/functions/cellData')
                 loadingSpinner[1].style.display = 'none';
                 teer[0].style.display = 'none';
                 teer[1].style.display = 'none';
-            }, 2000); // Simulate a 2-second delay
+            }, 500); // Simulate a 2-second delay
         }
 
         function renderTableBefore9(tableId){
@@ -78,7 +78,7 @@ fetch('/.netlify/functions/cellData')
             button.textContent = 'Hubungi Kami';
             // Add an onclick event to the button to redirect to a URL
             button.onclick = function () {
-                window.location.href = 'https://wa.me/628569934348?text=Halo%20LogamBerkah\nSaya ingin bertanya nih!';  // The target URL
+                window.location.href = 'https://wa.me/628569934348?text=Halo%20LogamBerkah Saya ingin bertanya nih!';  // The target URL
             };
             newCell.appendChild(button);
             // Append the <td> to the <tr>
