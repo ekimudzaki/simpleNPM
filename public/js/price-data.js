@@ -52,7 +52,7 @@ fetch('/.netlify/functions/cellData')
                 loadingSpinner[1].style.display = 'none';
                 teer[0].style.display = 'none';
                 teer[1].style.display = 'none';
-            }, 500); // Simulate a 2-second delay
+            }, 50); // Simulate a 2-second delay
         }
 
         function renderTableBefore9(tableId){
