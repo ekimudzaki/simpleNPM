@@ -88,7 +88,7 @@ fetch('/.netlify/functions/cellData')
         }
 
         // Logic: Check if it's before 9 AM (09:00)
-        if (currentHourGMT7 < 11) {
+        if (currentHourGMT7 < 9) {
             //hide all spinner
             loadingSpinner[0].style.display = 'none';
             loadingSpinner[1].style.display = 'none';
