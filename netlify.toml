@@ -16,4 +16,9 @@
 [[redirects]]
     from = "/jual-beli-antar-emas-antam"
     to = "/index.html#gold-price"
-    status = 200
+    status = 301
+
+[[redirects]]
+    from = "/review"
+    to = "https://g.page/r/CSqS7XFeYwogEBM/review"
+    status = 301
