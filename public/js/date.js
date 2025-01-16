@@ -4,7 +4,9 @@ const formattedDate = today.toLocaleDateString('id-ID', {
     weekday: 'long',  // "Monday"
     year: 'numeric',  // "2024"
     month: 'long',    // "September"
-    day: 'numeric'    // "30"
+    day: 'numeric',    // "30"
+    hour: '2-digit',   // e.g., "14"
+    minute: '2-digit',
 });
 
 // Example Output: "Monday, September 30, 2024"
