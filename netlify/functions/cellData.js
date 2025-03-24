@@ -49,9 +49,13 @@ async function getCellData(range, index) {
 }
 
 exports.handler = async function () {
+    // awalnya C2:F18
     const cellData = await getCellData('C2:F18', 2);
     return {
         statusCode: 200,
+        headers: {
+            'Cache-Control': 'public, max-age=60', // Cache for 60 seconds
+          },
         body: JSON.stringify(cellData),
     };
 }
